@@ -26,16 +26,23 @@ async function render() {
 
     console.log(team);
 
-    const containerElement = document.createElement('div');
+    const itemContainerElement = Object.assign(
+      document.createElement('div'), { className: 'item' }
+    );
+    const itemDataElement = Object.assign(
+      document.createElement('div'), { className: 'data' }
+    );
     const nameElement = document.createElement('h2');
     const logoElement = document.createElement('img');
 
     nameElement.innerHTML = team.name;
     logoElement.src = `${IMAGE_BASE}${team.logo}`;
 
-    containerElement.appendChild(nameElement);
-    containerElement.appendChild(logoElement);
+    itemDataElement.appendChild(nameElement);
+    itemDataElement.appendChild(logoElement);
 
-    app.appendChild(containerElement);
+    itemContainerElement.appendChild(itemDataElement);
+
+    app.appendChild(itemContainerElement);
   }
 }
