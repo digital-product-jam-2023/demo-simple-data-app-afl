@@ -2,30 +2,139 @@
 
 <head>
   <meta charset=utf-8>
-  <title></title>
+  <title>Australian Football Teams</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
   <div id="container">
     <div id="main">
-      <h1>Australian Football League Teams</h1>
-      <div id="app" class="row">
+      <h1 class="content">Australian Football League Teams</h1>
 
-        <!-- <div class="item">
-          <div class="data">
-            <h2>Example Heading</h2>
-            <p>Example text.</p>
+      <div class="row">
+
+        <div class="item meta">
+          <div class="content">
+            <p>This is an app to discover football data.</p>
           </div>
-        </div> -->
+        </div>
+
+        <div class="item meta">
+
+          <div class="row">
+
+            <div class="item meta">
+              <div class="content">
+                <p>Sort</p>
+                <select id="data-sort">
+                  <option value="a-z">A to Z</option>
+                  <option value="z-a">Z to A</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="item meta">
+              <div class="content">
+                <p>Filter</p>
+                <select id="data-filter">
+                  <option value="-">n/a</option>
+                  <option value="pre-1980">Pre 1980 teams</option>
+                  <option value="post-1980">Post 1980 teams</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
+
+      <div id="app" class="row">
+
+        <div class="Loading">
+          Loading data ...
+        </div>
+
+        <!-- <div class="item">
+
+          <div class="content data-record">
+            <h2>Example Heading</h2>
+            <img src="https://dummyimage.com/100x100/000/fff" />
+            <div>
+              <p>Debuted in year 1984</p>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <td>Year</td>
+                  <td>Played</td>
+                  <td>Won</td>
+                  <td>Lost</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2022</td>
+                  <td>18</td>
+                  <td>9</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>2021</td>
+                  <td>21</td>
+                  <td>13</td>
+                  <td>8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div> -->
+      </div>
     </div>
-  </div>
-  <script src="index.js"></script>
-  <script>
-    render();
-  </script>
+
+    <template id="data-record-template">
+      <div class="item">
+        <div class="content data-record">
+          <div class="row">
+            <div class="item data-title">
+              <h2 class="content"></h2>
+            </div>
+            <div class="item data-image">
+              <img class="content" src="" />
+            </div>
+          </div>
+          <div>
+            <p></p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Year</td>
+                <td>Played</td>
+                <td>Won</td>
+                <td>Lost</td>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </template>
+
+    <template id="data-record-stats-template">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>

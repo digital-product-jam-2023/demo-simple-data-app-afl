@@ -13,13 +13,32 @@
 }
 
 .item {
+  box-sizing: border-box;
   flex-grow: 0;
   flex-basis: 100%;
 
-  box-sizing: border-box;
+  /* design helper */
+  border: 1px dotted orangered;
+}
 
-  /* visual helper */
-  border: 1px dotted pink;
+.content {
+  /* Usage: always nest inside .item */
+  flex-grow: 0;
+  flex-basis: 100%;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 10px;
+
+  /* design helper */
+  border: 1px dotted blueviolet;
+}
+
+.item.meta {
+  flex-basis: 50%;
+}
+
+.item.cell {
+  flex-basis: 25%;
 }
 
 /* adjustments for medium screens, like some tablets or landscape on a mobile */
@@ -54,21 +73,39 @@
 
 body {
   background-color: #f5f5f5;
-  color: #2d2c2c
+  color: #2d2c2c;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.data {
-  flex-grow: 0;
-  flex-basis: 100%;
-  box-sizing: border-box;
+p {
+  color: #494545;
+}
 
-  margin: 5px;
-  padding: 10px;
-  height: 250px;
+.data-record {
   /* visual helper */
-  border: 1px dotted blueviolet;
+  border: 1px solid blueviolet;
 }
 
-.data img {
-  width: 150px;
+.data-record img {
+  max-width: 100%;
+}
+
+.data-record table {
+  width: 100%;
+}
+
+.data-record table td {
+  width: 25%;
+}
+
+.data-record table thead td {
+  border-bottom: 2px solid gray;
+}
+
+.data-record .item.data-title {
+  flex-basis: 66.6666666666666667%;
+}
+
+.data-record .item.data-image {
+  flex-basis: 33.33333333333333333%;
 }
