@@ -14,7 +14,7 @@ const dataSort = document.getElementById("data-sort");
 // and a callback function, which is run every time this event is triggered
 dataSort.addEventListener("change", async (event) => {
   console.log("Data Sort Change");
-  console.log(e.target.value);
+  console.log(event.target.value);
 
   // we are rebuilding the display of our app here with the next lines of code:
   // 1. We are re-fetching data from our API (it is possible to skip this step, but we are being safe that we display exactly the right information)
@@ -33,15 +33,15 @@ const dataFilter = document.getElementById("data-filter");
 // Then, we register an event listener on our data filtering select box, using the "change" event
 // Notice addEventListener takes two arguments, the name of the event ("change")
 // and a callback function, which is run every time this event is triggered
-dataFilter.addEventListener("change", async (e) => {
+dataFilter.addEventListener("change", async (event) => {
   console.log("Data Filter Change");
-  console.log(e.target.value);
+  console.log(event.target.value);
 
   // we are rebuilding the display of our app here with the next lines of code:
   // 1. We are re-fetching data from our API
   const data = await getData();
   // 2. We run our function which filters the data based on the value in our select element (event.target.value)
-  const filteredData = filterData(data, e.target.value);
+  const filteredData = filterData(data, event.target.value);
   // 3. We clear what is currently in our app
   clearUI();
   // 4. We re-render our app with the filtered data
