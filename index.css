@@ -1,5 +1,12 @@
 /* !!!!!!!!!!!!!!!!!!!! */
-/* LAYOUT HELPERS */
+
+/* START LAYOUT HELPERS */
+
+/* This section is a mini "framework" using flexbox to let you build layouts of boxes!
+See how it is used in the HTML. They key part are the .row and .item classes
+Remember you can create box layouts within boxes
+Also see how the media queries are used to change the size of boxes for different screen sizes */
+
 /* !!!!!!!!!!!!!!!!!!!! */
 
 #container {
@@ -17,19 +24,16 @@
   flex-grow: 0;
   flex-basis: 100%;
 
-  /* design helper */
   border: 1px dotted orangered;
 }
 
 .content {
-  /* Usage: always nest inside .item */
   flex-grow: 0;
   flex-basis: 100%;
   box-sizing: border-box;
   margin: 5px;
   padding: 10px;
 
-  /* design helper */
   border: 1px dotted blueviolet;
 }
 
@@ -68,7 +72,9 @@
 }
 
 /* !!!!!!!!!!!!!!!!!!!! */
+
 /* END LAYOUT HELPERS */
+
 /* !!!!!!!!!!!!!!!!!!!! */
 
 body {
@@ -82,7 +88,6 @@ p {
 }
 
 .data-record {
-  /* visual helper */
   border: 1px solid blueviolet;
 }
 

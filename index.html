@@ -9,20 +9,17 @@
 <body>
   <div id="container">
     <div id="main">
+
       <h1 class="content">Australian Football League Teams</h1>
 
       <div class="row">
-
         <div class="item meta">
           <div class="content">
             <p>This is an app to discover football data.</p>
           </div>
         </div>
-
         <div class="item meta">
-
           <div class="row">
-
             <div class="item meta">
               <div class="content">
                 <p>Sort</p>
@@ -32,7 +29,6 @@
                 </select>
               </div>
             </div>
-
             <div class="item meta">
               <div class="content">
                 <p>Filter</p>
@@ -43,55 +39,17 @@
                 </select>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
 
       <div id="app" class="row">
-
-        <div class="Loading">
+        <!-- Notice how this element below is cleared from the DOM in the clearUI function in JavaScript -->
+        <div class="loading">
           Loading data ...
         </div>
-
-        <!-- <div class="item">
-
-          <div class="content data-record">
-            <h2>Example Heading</h2>
-            <img src="https://dummyimage.com/100x100/000/fff" />
-            <div>
-              <p>Debuted in year 1984</p>
-            </div>
-            <table>
-              <thead>
-                <tr>
-                  <td>Year</td>
-                  <td>Played</td>
-                  <td>Won</td>
-                  <td>Lost</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>2022</td>
-                  <td>18</td>
-                  <td>9</td>
-                  <td>9</td>
-                </tr>
-                <tr>
-                  <td>2021</td>
-                  <td>21</td>
-                  <td>13</td>
-                  <td>8</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-        </div> -->
       </div>
+
     </div>
 
     <template id="data-record-template">
@@ -118,7 +76,7 @@
               </tr>
             </thead>
             <tbody>
-              <!-- Rows -->
+              <!-- See in the JavaScript how we insert the other template, #data-record-stats-template, into here, when we use this template -->
             </tbody>
           </table>
         </div>
