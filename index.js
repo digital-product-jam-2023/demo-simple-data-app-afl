@@ -21,9 +21,7 @@ dataSort.addEventListener("change", async (event) => {
   const data = await getData();
   // 2. We run our function which sorts the data based on the value in our select element (event.target.value)
   const sortedData = sortData(data, event.target.value);
-  // 3. We clear what is currently in our app
-  clearUI();
-  // 4. We re-render our app with the sorted data
+  // 3. We re-render our app with the sorted data
   await renderUI(sortedData);
 })
 
@@ -42,9 +40,7 @@ dataFilter.addEventListener("change", async (event) => {
   const data = await getData();
   // 2. We run our function which filters the data based on the value in our select element (event.target.value)
   const filteredData = filterData(data, event.target.value);
-  // 3. We clear what is currently in our app
-  clearUI();
-  // 4. We re-render our app with the filtered data
+  // 3. We re-render our app with the filtered data
   await renderUI(filteredData);
 })
 
