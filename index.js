@@ -119,7 +119,7 @@ async function renderUI(data) {
     introText.innerHTML = `Debuted in ${team.debut}`;
 
     // Now, for each team, we have another loop over the games
-    // So that we can create a table row for each game
+    // So that we can create a table row for each year
     // See here we use Object.entries() to loop over an Object
     // See here we also use destructuring assignment "const [year, games]"
     for (const [year, games] of Object.entries(team.games).reverse()) {
